@@ -1,0 +1,53 @@
+<!-- 
+
+Práctica P10b - Módulo 3 JS
+
+Asumiendo que Math.floor((Math.random() * 100) + 1); saca elementos al azar entre 1 y 100, queremos que hagas lo siguiente:
+
+1. Saca 50 números al azar entre 1 y 100
+2. Almacena los números que salgan impares en un array impares
+3. Almacena los números que salgan pares en un array pares
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		var arrayImpares = [];
+		var arrayPares = [];
+		var valorRandom = 0;
+
+		document.write("Numeros al azar:" + "<br>");
+
+		for (var i = 0; i < 50; i++) {											// Bucle para repetir la iteración 50 veces
+																				
+			valorRandom = Math.floor((Math.random() * 100) + 1);				// Calculo el valorRandom
+			document.write(valorRandom + "<br>");								// Saco por pantalla el listado de valorRandom
+
+			if (valorRandom % 2 != 0) {											// Compruebo si el valorRandom es par o impar
+				arrayImpares.push(valorRandom);									// Guardo los valores impares en el arrayImpares
+			} else {
+				arrayPares.push(valorRandom);									// Guardo los valores pares en el arrayPares
+			}
+
+		}
+
+		document.write("<br>" + "Array de Impares:" + "<br>");					// Recorro el arrayImpares y muestro sus valores
+		for (var i = 0; i < arrayImpares.length; i++) {
+			document.write(arrayImpares[i] + " ");
+		}
+
+		document.write("<br>" + "<br>" + "Array de Pares:" + "<br>");			// Recorro el arrayPares y muestro sus valores
+		for (var i = 0; i < arrayPares.length; i++) {
+			document.write(arrayPares[i] + " ");
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
